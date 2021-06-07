@@ -1,0 +1,20 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+   name: nginx-deployment-tenant2
+   namespace: tenant2
+spec:
+   replicas: 1
+   selector:
+     matchLabels:
+       app: nginx-tenant2
+   template:
+      metadata:
+        labels:
+           app: nginx-tenant2
+      spec:
+        containers:
+        - name: nginx-tenant2
+          image: nginx:1.20.1
+          ports:
+          - containerPort: 80
