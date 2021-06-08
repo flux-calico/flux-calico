@@ -1,2 +1,2 @@
-# hexon-calico
-hexon-calico
+# flux-calico
+flux-calico
